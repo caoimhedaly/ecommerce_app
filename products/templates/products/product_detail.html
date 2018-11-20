@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+<div class='row'>
+    <div class="col-sm-6 ">
+        <div class="thumbnail">
+            <img src="{{MEDIA_URL}}{{product.image}}" alt="">
+
+        </div>
+        <div class="col-sm-6 ">
+            <div class="caption">
+                
+                <h3>{{product.name}}
+                </h3>
+                <h4>Price: €{{product.price}}</h4>
+                <p>Brand: {{product.brand}}</p>
+
+                <p>{{product.description | linebreaksbr }}</p>
+                <p><span class="boldtext">Stock:</span> {{ product.stock}} </p>
+                <p><span class="boldtext">SKU:</span> {{ product.sku }}</p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}
