@@ -16,6 +16,13 @@
                 <p>{{product.description | linebreaksbr }}</p>
                 <p><span class="boldtext">Stock:</span> {{ product.stock}} </p>
                 <p><span class="boldtext">SKU:</span> {{ product.sku }}</p>
+                
+                 <form method="POST" action="{% url 'add_to_cart'  %}">
+                     {% csrf_token %}
+                                    <input type="number" name="quantity" value="1"/>
+                                    <input class="btn btn-primary" type="submit" value="Add to cart"/>
+                                </form>
+                                
 
 
 
