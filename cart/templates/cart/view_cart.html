@@ -3,6 +3,7 @@
 {% block content %}
 
 {% if items_in_cart > 0 %}
+<!--if there are cart items then display the table-->
 
 <table class="table">
     <thead>
@@ -50,7 +51,7 @@
     </tbody>
 </table>
 
-<a href="#" class="btn btn-success" role="button">Checkout</a>
+<a href="{% url 'show_checkout' %}" class="btn btn-success" role="button">Checkout</a>
 
 {% else %}
 <h1>You have no items in your cart.</h1>

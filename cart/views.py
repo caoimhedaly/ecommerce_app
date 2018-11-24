@@ -63,7 +63,7 @@ def remove_from_cart(request):
     # get the cart items from session
     
     del cart[product_id]
-    # delete product from cart by id ir key value pair
+    # delete product from cart by id in key value pair
     
     request.session['cart']=cart
     # save the cart again
